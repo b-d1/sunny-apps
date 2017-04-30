@@ -3,19 +3,114 @@
     <button ion-button menuToggle>
       <ion-icon name="menu"></ion-icon>
     </button>
-    <ion-title>Search</ion-title>
+    <ion-title>Find beaches</ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content padding>
   <ion-grid>
+      <ion-row class="block">
+          <h3 class="main-header">Find your favourite beach</h3>
+      </ion-row>
     <ion-row>
-      <ion-searchbar (ionInput)="getItems($event)"></ion-searchbar>
-      <ion-list>
-        <ion-item *ngFor="let item of items">
-          <span *ngIf="!item.hidden">{{ item.name }}</span>
-        </ion-item>
-      </ion-list>
+      <ion-searchbar (ionInput)="getItems($event)" [(ngModel)]="itemSearch"></ion-searchbar>
+
+        <ion-card id="card-search" *ngIf="itemList">
+            <ion-list *ngFor="let item of items">
+              <button ion-item *ngIf="!item.hidden" (click)="setItem(item)">
+                <i class="fa fa-map-marker"></i>
+
+
+                <span>{{ item.name }}</span>
+              </button>
+            </ion-list>
+        </ion-card>
+
     </ion-row>
+
+
+    <div *ngIf="show && !itemTmp.hidden">
+          <ion-row>
+          <ion-card>
+              <ion-card-header class="card-header1">
+                  <ion-row>
+                      <ion-col col-12 class="col-header"><i class="fa fa-map-marker" aria-hidden="true"></i>
+                          {{itemTmp.name}}</ion-col>
+
+                  </ion-row>
+
+
+                  <!-- <ion-icon name="{{getBadgeIcon()}}" [style.color]="itemTmp.badgeColor" class="icon-status"></ion-icon>-->
+
+              </ion-card-header>
+
+
+              <!--[style.color]="itemTmp.badgeColor"-->
+              <ion-row class="row-main">
+                  <ion-col col-4><i class="fa {{getBadgeIcon()}} icon-main" [style.color]="itemTmp.badgeColor" aria-hidden="true"></i> </ion-col>
+                  <ion-col col-8>
+                      <ion-row>
+                          <ion-col col-12 class="uv"><i class="fa fa-sun-o" aria-hidden="true"></i> <h2>UV:</h2> <h2 [style.color]="itemTmp.badgeColor">{{getUV(itemTmp.UVIndex)}}</h2></ion-col>
+                      </ion-row>
+                      <ion-row>
+                          <ion-col col-12 class="hab"><i class="fa fa-leaf" aria-hidden="true"></i> <h2 class="{{itemTmp.color}}">HAB:</h2> <h2 [style.color]="getHubColor(itemTmp.algalConcentration)">{{getHub(itemTmp.algalConcentration)}}</h2></ion-col>
+                      </ion-row>
+                  </ion-col>
+              </ion-row>
+
+              <ion-row>
+                  <ion-col col-12 class="col-left"><h2 class="recommend-item">{{itemTmp.recommendation3}}</h2></ion-col>
+              </ion-row>
+
+
+          </ion-card>
+      </ion-row>
+
+      <ion-row>
+          <ion-card>
+              <ion-card-header class="card-header1">
+                  <i class="fa fa-info-circle" aria-hidden="true"></i> Recommendations
+              </ion-card-header>
+              <ion-card-content>
+
+                  <h2 class="recommend"><strong>1</strong> - {{itemTmp.recommendation1}}</h2>
+
+                  <h2 class="recommend"><strong>2</strong> - {{itemTmp.recommendation2}}</h2>
+
+
+              </ion-card-content>
+
+
+          </ion-card>
+      </ion-row>
+
+          <ion-row>
+              <ion-card>
+                  <ion-card-header class="card-header1">
+                      <i class="fa fa-line-chart" aria-hidden="true"></i> Infographics
+                  </ion-card-header>
+                  <chart [options]="options"></chart>
+
+              </ion-card>
+          </ion-row>
+
+        <ion-row>
+            <ion-card class="extra-info">
+                <ion-card-header class="card-header1">
+                    <i class="fa fa-asterisk" aria-hidden="true"></i> Data analysis
+                </ion-card-header>
+                <p>The UV index between 12.00 - 16.00 is <strong>twice</strong> higher than after 16.00.</p>
+
+                <p>The Hazardous Algal concentration is <strong>low</strong>, and will stay low until the end of the day at {{itemTmp.name}}.</p>
+
+
+                <p>There will be <strong>clouds</strong> on the beach in a few hours, so you should plan your stay carefully.</p>
+            </ion-card>
+        </ion-row>
+
+    </div>
+
+
+
   </ion-grid>
 </ion-content>
