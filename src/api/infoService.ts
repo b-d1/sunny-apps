@@ -21,7 +21,7 @@ export class InfoService {
     }
 
     getInfo(lat: number, lng: number) {
-
+            console.log("hello");
 
             let url = "http://localhost:8000/getdata?lat=" + lat + "&lng=" + lng;
 

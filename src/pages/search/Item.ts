@@ -9,16 +9,17 @@ export class Item {
     url: string;
     hidden: boolean;
     icon: string;
-    explanation1: string;
-    explanation2: string;
+
     temperature: number;
     clouds: string;
-    algalb: number;
-    UVIndex: number;
+    UVIndex: string;
     badgeColor: string;
-    recommendation: string;
-    gData1: Array<number>;
-    gdata2: Array<number>;
+    recommendation1: string;
+    recommendation2: string;
+    recommendation3: string;
+    HoursGraph: Array<number>;
+    UVGraph: Array<number>;
+    algalConcentration: string;
     recommendedHours: string;
 
 

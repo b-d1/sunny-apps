@@ -9,10 +9,12 @@ import { Recommend } from '../pages/recommend/recommend';
 import { ListPage } from '../pages/list/list';
 import { Beaches } from '../pages/beaches/beaches';
 import { Profile } from '../pages/profile/profile';
-
+import { NativeScriptHttpModule } from "nativescript-angular/http"
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
+import { ChartModule } from 'angular2-highcharts';
 
+declare var require: any;
 @NgModule({
   declarations: [
     MyApp,
@@ -26,7 +28,9 @@ import { SplashScreen } from '@ionic-native/splash-screen';
   imports: [
     HttpModule,
     BrowserModule,
-    IonicModule.forRoot(MyApp),
+    IonicModule.forRoot(MyApp, {passThruUnknownUrl: true}),
+    ChartModule.forRoot(require('highcharts'))
+
   ],
   bootstrap: [IonicApp],
   entryComponents: [
