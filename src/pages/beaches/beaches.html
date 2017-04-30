@@ -8,11 +8,219 @@
 </ion-header>
 
 <ion-content padding>
-  <h3>My Beaches page</h3>
 
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will show you the way.
-  </p>
+  <ion-grid>
 
-  <button ion-button secondary menuToggle>Toggle Menu</button>
+    <ion-row style="border-bottom: 1px solid lightgray;">
+
+      <h3 style="text-align:center;">Favorite beaches!</h3>
+
+    </ion-row>
+
+    <ion-row class="beaches-card-wrapper">
+
+      <ion-card class="beaches-card">
+
+        <ion-card-header class="beaches-card-header">
+
+          <ion-row>
+
+            <ion-col col-10 class="beaches-card-header-location beaches-fix-push-down">
+
+              <ion-icon name="pin"></ion-icon> Palm Beach
+
+            </ion-col>
+
+            <ion-col col-2 class="beaches-card-header-icon">
+
+              <ion-icon name="sunny"></ion-icon>
+
+            </ion-col>
+
+          </ion-row>
+
+        </ion-card-header>
+
+        <ion-card-content class="beaches-card-content-wrapper">
+
+          <ion-row class="beaches-card-content">Great conditions</ion-row>
+
+          <ion-row class="beaches-card-footer">
+
+            <!--<ion-col col-4></ion-col>-->
+
+            <ion-col col-12>
+
+              <button ion-button block class="beaches-card-remove-button">Remove</button>
+
+            </ion-col>
+
+            <!--<ion-col col-4></ion-col>-->
+
+          </ion-row>
+
+        </ion-card-content>
+
+      </ion-card>
+
+    </ion-row>
+
+    <ion-row class="beaches-card-wrapper">
+
+      <ion-card class="beaches-card">
+
+        <ion-card-header class="beaches-card-header">
+
+          <ion-row>
+
+            <ion-col col-10 class="beaches-card-header-location beaches-fix-push-down">
+
+              <ion-icon name="pin"></ion-icon> Key Beach
+
+            </ion-col>
+
+            <ion-col col-2 class="beaches-card-header-icon">
+
+              <ion-icon name="sunny"></ion-icon>
+
+            </ion-col>
+
+          </ion-row>
+
+        </ion-card-header>
+
+        <ion-card-content class="beaches-card-content-wrapper">
+
+          <ion-row class="beaches-card-content">
+
+            <p>Low UV radiation without harmful algal blooms! Perfect for today!</p>
+
+          </ion-row>
+
+          <ion-row class="beaches-card-footer">
+
+            <!--<ion-col col-4></ion-col>-->
+
+            <ion-col col-12>
+
+              <button ion-button block class="beaches-card-remove-button">Remove</button>
+
+            </ion-col>
+
+            <!--<ion-col col-4></ion-col>-->
+
+          </ion-row>
+
+        </ion-card-content>
+
+      </ion-card>
+
+    </ion-row>
+
+    <ion-row class="beaches-card-wrapper">
+
+      <ion-card class="beaches-card">
+
+        <ion-card-header class="beaches-card-header">
+
+          <ion-row>
+
+            <ion-col col-10 class="beaches-card-header-location beaches-fix-push-down">
+
+              <ion-icon name="pin"></ion-icon> Siesta Key
+
+            </ion-col>
+
+            <ion-col col-2 class="beaches-card-header-icon">
+
+              <ion-icon name="cloudy"></ion-icon>
+
+            </ion-col>
+
+          </ion-row>
+
+        </ion-card-header>
+
+        <ion-card-content class="beaches-card-content-wrapper">
+
+          <ion-row class="beaches-card-content">
+
+            <p>Low UV radiation with potential clouds! May be great for getting tan!</p>
+
+          </ion-row>
+
+          <ion-row class="beaches-card-footer">
+
+            <!--<ion-col col-4></ion-col>-->
+
+            <ion-col col-12>
+
+              <button ion-button block class="beaches-card-remove-button">Remove</button>
+
+            </ion-col>
+
+            <!--<ion-col col-4></ion-col>-->
+
+          </ion-row>
+
+        </ion-card-content>
+
+      </ion-card>
+
+    </ion-row>
+
+    <ion-row class="beaches-card-wrapper">
+
+      <ion-card class="beaches-card">
+
+        <ion-card-header class="beaches-card-header">
+
+          <ion-row>
+
+            <ion-col col-10 class="beaches-card-header-location beaches-fix-push-down">
+
+              <ion-icon name="pin"></ion-icon> Naples
+
+            </ion-col>
+
+            <ion-col col-2 class="beaches-card-header-icon">
+
+              <ion-icon name="cloudy"></ion-icon>
+
+            </ion-col>
+
+          </ion-row>
+
+        </ion-card-header>
+
+        <ion-card-content class="beaches-card-content-wrapper">
+
+          <ion-row class="beaches-card-content">
+
+            <p>Cloudy weather, low UV radiation! Great for water handball!</p>
+
+          </ion-row>
+
+          <ion-row class="beaches-card-footer">
+
+            <!--<ion-col col-4></ion-col>-->
+
+            <ion-col col-12>
+
+              <button ion-button block class="beaches-card-remove-button">Remove</button>
+
+            </ion-col>
+
+            <!--<ion-col col-4></ion-col>-->
+
+          </ion-row>
+
+        </ion-card-content>
+
+      </ion-card>
+
+    </ion-row>
+
+  </ion-grid>
+
 </ion-content>

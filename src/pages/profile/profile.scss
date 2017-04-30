@@ -1,3 +1,49 @@
-page-profile {
+$blue-color: rgb(146, 148, 113);
+$border-color: rgb(221, 220, 223);
+$margin-size: 10px;
 
+#profile-profile-picture {
+  width: 100%;
+  border-radius: 20px;
 }
+
+#profile-display-username {
+  border-top: solid $border-color 1px;
+  border-bottom: solid $border-color 1px;
+  border-right: solid $border-color 1px;
+}
+
+#profile-display-points{
+  border-top: solid $border-color 1px;
+  border-bottom: solid $border-color 1px;
+}
+
+#profile-username-points-wrapper{
+  margin-top: $margin-size;
+}
+
+#profile-description-wrapper {
+  margin-top: $margin-size;
+  padding-bottom: $margin-size;
+}
+
+.profile-fix-push-down {
+  padding-top: 1em;
+}
+
+#profile-display-visited-places{
+  border-bottom: solid $border-color 1px;
+  border-top: solid $border-color 1px;
+}
+
+#profile-display-visited-places span{
+  float: right;
+}
+
+#profile-display-age{
+  border-bottom: solid $border-color 1px;
+  border-right: solid $border-color 1px;
+  border-top: solid $border-color 1px;
+}
+
+

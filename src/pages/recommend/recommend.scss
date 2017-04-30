@@ -1,3 +1,32 @@
-page-recommend {
+$blue-color: rgb(146, 148, 113);
+$border-color: rgb(221, 220, 223);
+$margin-size: 10px;
 
+.recommended-card-header {
+  margin-top: -0.5em !important;
+}
+
+.recommended-card-header-location {
+  border-bottom: solid $border-color 1px;
+  border-right: solid $border-color 1px;
+}
+
+.recommended-card-header-icon {
+  border-bottom: solid $border-color 1px;
+  font-size: 25px;
+}
+
+.recommended-fix-push-down {
+  padding-top: 0.5em;
+}
+
+.recommended-card-content {
+  margin-top: -0.5em !important;
+  padding-bottom: 0.5em !important;
+  border-bottom: solid $border-color 1px;
+}
+
+.recommended-card-remove-button {
+  height: 2em;
+  font-size: 12px;
 }
