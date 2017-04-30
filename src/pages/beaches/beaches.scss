@@ -5,6 +5,9 @@ $margin-size: 10px;
 .beaches-card-header-location {
   border-bottom: solid $border-color 1px;
   border-right: solid $border-color 1px;
+  font-size: 17px;
+  font-weight: bold;
+  color: #616161;
 }
 
 .beaches-card-header {
@@ -14,6 +17,7 @@ $margin-size: 10px;
 .beaches-card-header-icon {
   border-bottom: solid $border-color 1px;
   font-size: 25px;
+  text-align: center;
 }
 
 .beaches-fix-push-down {
@@ -27,14 +31,31 @@ $margin-size: 10px;
 .beaches-card-content {
   border-bottom: solid $border-color 1px;
   margin-top: -0.5em !important;
-  padding-bottom: 0.5em !important;
+  padding-bottom: 11px !important;
+  padding-top: 10px !important;
+  padding-left: 4px;
 }
 
 .beaches-card-footer {
   margin-bottom: -1em;
 }
 
+.right-p {
+  padding-right: 0 !important;
+}
+
+.left-p {
+  padding-left:0 !important;
+}
+
+.beaches-card-footer {
+  margin-top: 10px !important;
+  margin-bottom: 0px !important;
+}
+
+
 .beaches-card-remove-button {
   height: 2em;
   font-size: 12px;
+  background-color: #ff5a70 !important;
 }
